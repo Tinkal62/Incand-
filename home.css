@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media (max-width: 768px) {
+    #headerView {
+        flex-direction: column;
+    }
+    #headerDiv, #headerPic {
+        width: 100%;
+        height: 50vh;
+    }
+    #headerNav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/*...................................................................Header..................................................................................*/
+#headerView {
+    display: flex;
+
+}
+#headerDiv {
+    height: 90vh;
+    width: 70vw;
+    background-image: url('img/I-ezgif.com-crop\ \(4\).gif');
+    background-size:cover;
+}
+#headerPic {
+    z-index: 2;
+    position: relative;
+    width: 25vw;
+    margin-right: 2vw;
+    height: 100vh;
+    overflow: hidden;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.image-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: moveUp 15s linear infinite;
+    z-index: 2;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-75%);
+    }
+}
+
+/* Navigation Bar Styling */
+#headerNav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.377); /* Initially transparent */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out, background 0.6s ease-in-out;
+}
+
+#headerNav.visible {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8); /* Dark background after scrolling */
+}
+
+/* Navbar links */
+#headerNav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+#headerNav ul li {
+    display: inline;
+}
+
+#headerNav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+#headerNav ul li a:hover {
+    color: #ffcc00; /* Highlight effect */
+}
+
+
+/*.................................................................... Footer Styling........................................................................ */
+footer {
+    background-color: #191919;
+    color: rgb(197, 194, 194);
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Columns */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+#footer-incand {
+    margin-bottom: 80px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+/* Quick Links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+/*....................... Social Media Icons............................ */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* ...................Footer Bottom......................................... */
+.footer-bottom {
+    background-color: #121212;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding: 20px;
+}
+
+
+
+/*............................................................. Global Section Styles....................................................................... */
+section {
+    padding: 80px 10%;
+    background: #121212;
+    color: white;
+}
+
+/* About Section Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about-container.reverse {
+    flex-direction: row-reverse;
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.about-content:hover p {
+    color: white;
+}
+
+/* About Image */
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    z-index: -1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in Effect on Scroll */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+/*................................................................events..................................................................................*/
+#events {
+    padding: 80px 10%;
+    background: #121212;
+    color: white;
+    /* text-align: center; */
+}
+
+.events-title {
+    color: #ffcc00;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.events-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+}
+
+.event-box {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.event-box.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.event-details {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.event-details img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+
+/*...........................................................................sponsers.........................................................................*/
+#sponsors {
+    height: 300px;
+    text-align: center;
+    padding: 100px 0 0 0;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+}
+
+.sponsors-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sponsor-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sponsor-slider {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: slideSponsors 20s linear infinite;
+}
+
+.sponsor-logo {
+    width: 180px; /* Adjust as needed */
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.sponsor-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes slideSponsors {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/*...........................................................................................................................................................*/
+
+
+
+#headerView {
+    display: flex;
+    background-color: #121212; /* Ensuring black background */
+}
+
+
+#headerDiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerDiv img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#headerDiv::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%; /* Adjust fade height */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
+    pointer-events: none;
+}
+
+
+
+
+.event-image {
+    position: relative;
+    display: inline-block;
+}
+
+.event-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.event-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, black 100%);
+    pointer-events: none;
+}
