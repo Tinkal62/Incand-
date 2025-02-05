@@ -22,7 +22,7 @@ html {
 }
 
 
-/*...................................................................Header..................................................................................*/
+
 #headerView {
     display: flex;
 
@@ -30,7 +30,7 @@ html {
 #headerDiv {
     height: 90vh;
     width: 70vw;
-    background-image: url('I-ezgif.com-crop\ \(4\).gif');
+    background-image: url('img/I-ezgif.com-crop\ \(4\).gif');
     background-size:cover;
 }
 #headerPic {
@@ -70,14 +70,13 @@ html {
     }
 }
 
-/* Navigation Bar Styling */
 #headerNav {
     z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.377); /* Initially transparent */
+    background: rgba(0, 0, 0, 0.377); 
     color: white;
     display: flex;
     justify-content: center;
@@ -85,16 +84,15 @@ html {
     padding: 15px 0;
     font-size: 18px;
     font-weight: bold;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     transition: opacity 0.6s ease-in-out, background 0.6s ease-in-out;
 }
 
 #headerNav.visible {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.8); /* Dark background after scrolling */
+    background: rgba(0, 0, 0, 0.8);
 }
 
-/* Navbar links */
 #headerNav ul {
     list-style: none;
     display: flex;
@@ -115,11 +113,11 @@ html {
 }
 
 #headerNav ul li a:hover {
-    color: #ffcc00; /* Highlight effect */
+    color: #ffcc00;
 }
 
 
-/*.................................................................... Footer Styling........................................................................ */
+
 footer {
     background-color: #191919;
     color: rgb(197, 194, 194);
@@ -136,7 +134,7 @@ footer {
     margin: auto;
 }
 
-/* Footer Columns */
+
 .footer-column {
     flex: 1;
     min-width: 250px;
@@ -153,7 +151,7 @@ footer {
     color: #ffcc00;
 }
 
-/* Quick Links */
+
 .footer-column ul {
     list-style: none;
     padding: 0;
@@ -173,7 +171,7 @@ footer {
     color: #ffcc00;
 }
 
-/*....................... Social Media Icons............................ */
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -191,7 +189,7 @@ footer {
     color: #ffcc00;
 }
 
-/* ...................Footer Bottom......................................... */
+
 .footer-bottom {
     background-color: #121212;
     font-size: 14px;
@@ -201,14 +199,13 @@ footer {
 
 
 
-/*............................................................. Global Section Styles....................................................................... */
 section {
     padding: 80px 10%;
     background: #121212;
     color: white;
 }
 
-/* About Section Layout */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -223,7 +220,7 @@ section {
     flex-direction: row-reverse;
 }
 
-/* About Content */
+
 .about-content {
     flex: 1;
     max-width: 500px;
@@ -247,7 +244,7 @@ section {
     color: white;
 }
 
-/* About Image */
+
 .about-image {
     flex: 1;
     max-width: 500px;
@@ -265,19 +262,19 @@ section {
     transform: scale(1.05);
 }
 
-/* Fade-in Effect on Scroll */
+
 .show {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
 
 
-/*................................................................events..................................................................................*/
+
 #events {
     padding: 80px 10%;
     background: #121212;
     color: white;
-    /* text-align: center; */
+    
 }
 
 .events-title {
@@ -335,8 +332,6 @@ section {
 
 
 
-
-/*...........................................................................sponsers.........................................................................*/
 #sponsors {
     height: 300px;
     text-align: center;
@@ -367,7 +362,7 @@ section {
 }
 
 .sponsor-logo {
-    width: 180px; /* Adjust as needed */
+    width: 180px; 
     height: auto;
     opacity: 0.8;
     transition: opacity 0.5s ease-in-out;
@@ -383,13 +378,11 @@ section {
     to { transform: translateX(-100%); }
 }
 
-/*...........................................................................................................................................................*/
-
 
 
 #headerView {
     display: flex;
-    background-color: #121212; /* Ensuring black background */
+    background-color: #121212; 
 }
 
 
@@ -412,7 +405,7 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 15%; /* Adjust fade height */
+    height: 15%; 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
     pointer-events: none;
 }
@@ -439,3 +432,141 @@ section {
     background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, black 100%);
     pointer-events: none;
 }
+
+
+
+
+
+
+
+
+
+
+/* Global Styles with Neon Effects */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+    50% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; }
+    100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+}
+
+/* Header Styling */
+#headerView {
+    display: flex;
+    background-color: #121212;
+    /* border-bottom: 3px solid #ff00ff; */
+    box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
+}
+
+#headerNav {
+    background: rgba(0, 0, 0, 0.8);
+    /* border-bottom: 2px solid #00ffff; */
+}
+
+#headerNav ul li a {
+    color: white;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#headerNav ul li a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 10%;
+    background: #121212;
+    color: white;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.about-content h2 {
+    color: #ff00ff;
+    animation: neonGlow 10s infinite alternate;
+}
+
+.about-content p {
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.about-content:hover p {
+    color: #ffffff;
+}
+
+/* Events Styling */
+#events {
+    padding: 80px 10%;
+    background: #121212;
+    color: white;
+    border: 2px solid #ff00ff;
+    border-top: none;
+    border-bottom: 1px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.events-title {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.event-box {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.event-box:hover {
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #191919;
+    color: rgb(197, 194, 194);
+    border-top: 3px solid #00ffff;
+    box-shadow: 0px -5px 20px rgba(0, 255, 255, 0.5);
+}
+
+.footer-column h3 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.footer-column ul li a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* Sponsor Section */
+#sponsors {
+    height: 45%;
+    margin-bottom: 0;
+    background-color: #121212;
+    border-top: 2px solid #00e1ff;
+    box-shadow: 0px -5px 20px rgba(255, 0, 255, 0.5);
+    border-bottom: 1px;
+}
+
+.sponsor-title {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    }
